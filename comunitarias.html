@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normativas Comunitarias | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --alert-red: #ff3333;
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+            --theme-color: var(--neon-purple);
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid var(--theme-color);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(176, 38, 255, 0.4), inset 0 0 20px rgba(176, 38, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--theme-color));
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(176, 38, 255, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--theme-color), 0 0 50px rgba(255, 42, 157, 0.3);
+            margin-bottom: 25px;
+            border: 2px solid var(--neon-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--theme-color), 0 0 20px var(--neon-pink);
+            font-size: 2.5em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        .desc-box {
+            background: rgba(176, 38, 255, 0.1);
+            border-left: 4px solid var(--neon-cyan);
+            padding: 15px 20px;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            border-radius: 0 8px 8px 0;
+            text-align: justify;
+        }
+
+        /* ESTILOS DE LA TABLA CYBERPUNK */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(176, 38, 255, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(5, 5, 8, 0.6);
+        }
+
+        th {
+            background: rgba(176, 38, 255, 0.3);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 18px 15px;
+            text-align: left;
+            border-bottom: 2px solid var(--theme-color);
+            text-shadow: 0 0 5px var(--neon-cyan);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(176, 38, 255, 0.2);
+            font-size: 1.15em;
+            transition: background 0.3s ease;
+        }
+
+        tr:hover td {
+            background: rgba(176, 38, 255, 0.15);
+        }
+
+        .sancion-grave {
+            color: var(--neon-pink);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 42, 157, 0.5);
+        }
+
+        .sancion-extrema {
+            color: var(--alert-red);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 51, 51, 0.6);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(176, 38, 255, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(176, 38, 255, 0.1);
+            color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .btn-volver:hover {
+            background: var(--neon-cyan);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-cyan), inset 0 0 20px var(--neon-cyan);
+            text-shadow: none;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- La imagen debe estar en la misma carpeta que este archivo HTML -->
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Normativas Comunitarias</h1>
+            <p class="intro">🏛️ STREAM CITY RP</p>
+        </div>
+
+        <div class="desc-box">
+            Esta tabla establece el <strong>régimen disciplinario oficial</strong> para el servidor, detallando las faltas y sus correspondientes medidas correctivas. Los números en la sanción representan los minutos de sanción o el tiempo de baneo estipulado.
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Motivo de la Falta</th>
+                        <th>Sanción Aplicada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>No rolear accidentes / Choques en pleno rol</td><td>50</td></tr>
+                    <tr><td>PG (PowerGaming)</td><td>100 / 400</td></tr>
+                    <tr><td>Mal uso de los entornos (EMS o a la Policía)</td><td>150</td></tr>
+                    <tr><td>Estar en servicio y no trabajar</td><td>150</td></tr>
+                    <tr><td>Usar mal el Chat / Nube</td><td>200</td></tr>
+                    <tr><td>Sabotear el orden público con mala intención sin rol</td><td>200</td></tr>
+                    <tr><td>Mal uso de /me - /do</td><td>200 / 400</td></tr>
+                    <tr><td>Disparar en zona segura (no matar)</td><td>250</td></tr>
+                    <tr><td>Robar carros en zona segura</td><td>250</td></tr>
+                    <tr><td>Robar inventario de un auto en zona segura</td><td class="sancion-grave">300 + Wipe total</td></tr>
+                    <tr><td>Burlarse de cuerpos abatidos / toxiqueo</td><td>300 / 500</td></tr>
+                    <tr><td>No tener perspectiva (clip de la situación)</td><td>300</td></tr>
+                    <tr><td>Hacer un robo y no enviar entorno</td><td class="sancion-grave">300 + Wipe total</td></tr>
+                    <tr><td>Robar carros de Policía / EMS / Taxis</td><td>350</td></tr>
+                    <tr><td>Catear / Robar en zona segura</td><td>300</td></tr>
+                    <tr><td>Robar, secuestrar o matar a civiles en servicio</td><td>400</td></tr>
+                    <tr><td>Esconder cuerpos para que los EMS no lo encuentren</td><td>400</td></tr>
+                    <tr><td>Uso de armas largas en ciudad</td><td>400</td></tr>
+                    <tr><td>Cop Baiting</td><td>400</td></tr>
+                    <tr><td>Forzar rol de manera mal intencionada</td><td>400</td></tr>
+                    <tr><td>Robar carro de NPC para movilizarse (excepto bandas para desmantelar)</td><td>500</td></tr>
+                    <tr><td>Matar NPC sin motivo</td><td>500</td></tr>
+                    <tr><td>Abusar de animaciones en enfrentamientos</td><td>300</td></tr>
+                    <tr><td>Matar montado o desde el auto</td><td>300</td></tr>
+                    <tr><td>Matar en zona segura (sin rol previo)</td><td>300</td></tr>
+                    <tr><td>No valorar vida en situación de rol</td><td>300</td></tr>
+                    <tr><td>Código X</td><td>300</td></tr>
+                    <tr><td>Mal uso del TH</td><td>300</td></tr>
+                    <tr><td>Uso indebido de casco</td><td>300</td></tr>
+                    <tr><td>CarKill / VDM</td><td>300</td></tr>
+                    <tr><td>DeathMatch</td><td>300</td></tr>
+                    <tr><td>No respetar rol de entorno</td><td>300</td></tr>
+                    <tr><td>Evadir Rol - Invadir Rol - Salirse de Rol</td><td>300</td></tr>
+                    <tr><td>MG (MetaGaming)</td><td class="sancion-grave">600 o 15 días de Baneo</td></tr>
+                    <tr><td>Volver al rol luego de un PK o de manera forzada (RK)</td><td>500</td></tr>
+                    <tr><td>Acosar, bullying, hostigar, y/o forzar animaciones sexuales</td><td class="sancion-extrema">1000 + Strike Público / Perma</td></tr>
+                    <tr><td>Mentir o faltar el respeto al Staff (En ad, soporte o ticket)</td><td class="sancion-grave">1000</td></tr>
+                    <tr><td>Citizen no Bush o kill fx (alumbrar personas)</td><td class="sancion-grave">4 días de Baneo</td></tr>
+                    <tr><td>F8 Quit / Time Out durante rol o mal intencionado</td><td class="sancion-grave">4 días de Baneo + Limpieza</td></tr>
+                    <tr><td>Mal comportamiento en soporte</td><td class="sancion-grave">1 - 7 días de Baneo</td></tr>
+                    <tr><td>Refuse SS / Uso de Carpetas / Hacks</td><td class="sancion-extrema">Baneo Permanente</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btn-container">
+            <a href="inicio.html" class="btn-volver">◀ Volver al Menú Principal</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
