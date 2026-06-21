@@ -17,10 +17,14 @@
         
         body {
             background-color: var(--dark-bg);
+            /* Se añade la imagen generada con un filtro oscuro encima para no perder legibilidad */
             background-image: 
-                linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
+                linear-gradient(rgba(5, 5, 8, 0.7), rgba(5, 5, 8, 0.8)),
+                url('Gemini_Generated_Image_eaqls5eaqls5eaql.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: var(--text-main);
             font-family: 'Rajdhani', sans-serif;
             margin: 0;
@@ -42,6 +46,7 @@
             box-shadow: 0 0 25px rgba(176, 38, 255, 0.4), inset 0 0 20px rgba(176, 38, 255, 0.1);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(5px); /* Efecto cristal para el panel */
         }
 
         .container::before {
@@ -62,17 +67,32 @@
             padding-bottom: 30px;
         }
 
+        /* Animación Cyberpunk para el logo */
+        @keyframes cyberGlow {
+            0% {
+                transform: translateY(0) scale(1);
+                box-shadow: 0 0 20px var(--neon-purple), 0 0 40px rgba(255, 42, 157, 0.5);
+                border-color: var(--neon-cyan);
+            }
+            50% {
+                transform: translateY(-12px) scale(1.03);
+                box-shadow: 0 0 35px var(--neon-cyan), 0 0 60px rgba(0, 240, 255, 0.8);
+                border-color: var(--neon-pink);
+            }
+            100% {
+                transform: translateY(5px) scale(0.98);
+                box-shadow: 0 0 25px var(--neon-pink), 0 0 50px rgba(176, 38, 255, 0.7);
+                border-color: var(--neon-purple);
+            }
+        }
+
         .logo {
             max-width: 250px;
             border-radius: 50%;
-            box-shadow: 0 0 30px var(--neon-purple), 0 0 50px rgba(255, 42, 157, 0.5);
             margin-bottom: 25px;
             border: 2px solid var(--neon-cyan);
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
+            /* Aplicamos la animación creada arriba */
+            animation: cyberGlow 4s infinite alternate ease-in-out;
         }
 
         h1 {
