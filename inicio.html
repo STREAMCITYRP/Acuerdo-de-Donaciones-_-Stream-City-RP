@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid var(--neon-purple);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(176, 38, 255, 0.4), inset 0 0 20px rgba(176, 38, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--neon-purple), 0 0 50px rgba(255, 42, 157, 0.5);
+            margin-bottom: 25px;
+            border: 2px solid var(--neon-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-pink);
+            font-size: 2.8em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: var(--text-main);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        strong.highlight {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            letter-spacing: 1px;
+        }
+
+        /* Cuadrícula del Menú */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo base de los botones */
+        .nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 20px;
+            background: rgba(176, 38, 255, 0.05);
+            color: #ffffff;
+            border: 2px solid var(--neon-purple);
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(176, 38, 255, 0.1), inset 0 0 10px rgba(176, 38, 255, 0.05);
+        }
+
+        .nav-btn span.icon {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Efectos y colores específicos por botón */
+        .btn-comunitarias {
+            border-color: var(--neon-purple);
+        }
+        .btn-comunitarias:hover {
+            background: var(--neon-purple);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-purple), inset 0 0 20px rgba(255,255,255,0.5);
+            transform: translateY(-5px);
+        }
+
+        .btn-legales {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+        }
+        .btn-legales:hover {
+            background: var(--neon-cyan);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-cyan), inset 0 0 20px rgba(255,255,255,0.5);
+            transform: translateY(-5px);
+        }
+
+        .btn-delictivas {
+            border-color: #ff3333;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.1);
+        }
+        .btn-delictivas:hover {
+            background: #ff3333;
+            color: #ffffff;
+            box-shadow: 0 0 30px #ff3333, inset 0 0 20px rgba(255,255,255,0.5);
+            transform: translateY(-5px);
+            text-shadow: 0 0 5px #000;
+        }
+
+        .btn-donaciones {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 15px rgba(255, 42, 157, 0.1);
+        }
+        .btn-donaciones:hover {
+            background: var(--neon-pink);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-pink), inset 0 0 20px rgba(255,255,255,0.5);
+            transform: translateY(-5px);
+        }
+
+        .btn-discord {
+            border-color: #5865F2;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.1);
+        }
+        .btn-discord:hover {
+            background: #5865F2;
+            color: #ffffff;
+            box-shadow: 0 0 30px #5865F2, inset 0 0 20px rgba(255,255,255,0.5);
+            transform: translateY(-5px);
+            text-shadow: 0 0 5px #000;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(176, 38, 255, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Bienvenido a la Ciudad</h1>
+            <p class="intro"><strong class="highlight">STREAM CITY RP</strong></p>
+        </div>
+
+        <p class="intro" style="font-family: 'Rajdhani', sans-serif;">
+            Selecciona una de las siguientes opciones para acceder a nuestros portales de información, leer la normativa vigente o gestionar tus beneficios.
+        </p>
+
+        <div class="menu-grid">
+            <a href="comunitarias.html" class="nav-btn btn-comunitarias">
+                <span class="icon">👥</span>
+                Normativas Comunitarias
+            </a>
+
+            <a href="legales.html" class="nav-btn btn-legales">
+                <span class="icon">⚖️</span>
+                Normativas Legales
+            </a>
+
+            <a href="delictivas.html" class="nav-btn btn-delictivas">
+                <span class="icon">🔫</span>
+                Normativas Delictivas
+            </a>
+
+            <a href="discord.html" class="nav-btn btn-discord">
+                <span class="icon">💬</span>
+                Normativas Discord
+            </a>
+
+            <a href="donaciones.html" class="nav-btn btn-donaciones">
+                <span class="icon">💎</span>
+                Acuerdo de Donaciones
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
