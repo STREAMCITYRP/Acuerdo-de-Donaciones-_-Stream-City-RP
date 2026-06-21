@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normativas Discord | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --discord-color: #5865F2; /* Color oficial de Discord */
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(88, 101, 242, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(88, 101, 242, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid var(--discord-color);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(88, 101, 242, 0.4), inset 0 0 20px rgba(88, 101, 242, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--discord-color), var(--neon-purple));
+            box-shadow: 0 0 15px var(--discord-color);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(88, 101, 242, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--discord-color), 0 0 50px rgba(88, 101, 242, 0.3);
+            margin-bottom: 25px;
+            border: 2px solid var(--discord-color);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--discord-color), 0 0 20px var(--discord-color);
+            font-size: 2.5em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: var(--discord-color);
+            text-shadow: 0 0 8px rgba(88, 101, 242, 0.6);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        .desc-text {
+            text-align: justify;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: rgba(88, 101, 242, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--discord-color);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--discord-color);
+            text-shadow: 0 0 8px rgba(88, 101, 242, 0.6);
+            border-left: 4px solid var(--neon-pink);
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.4em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.15em;
+            text-align: justify;
+        }
+
+        ul li::before {
+            content: '►';
+            color: var(--neon-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9em;
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+
+        /* Estilos específicos para la lista de sanciones */
+        .sanciones-list li::before {
+            content: '⚡';
+            color: #ff3333;
+            text-shadow: 0 0 5px #ff3333;
+        }
+
+        strong {
+            color: #ffffff;
+            text-shadow: 0 0 4px var(--discord-color);
+        }
+
+        .alert-text {
+            text-align: center;
+            font-size: 1.2em;
+            color: #ff3333;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 51, 51, 0.1);
+            border: 1px solid #ff3333;
+            border-radius: 8px;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 51, 51, 0.4);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(88, 101, 242, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(88, 101, 242, 0.1);
+            color: var(--discord-color);
+            border: 2px solid var(--discord-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.3), inset 0 0 10px rgba(88, 101, 242, 0.2);
+        }
+
+        .btn-volver:hover {
+            background: var(--discord-color);
+            color: #ffffff;
+            box-shadow: 0 0 30px var(--discord-color), inset 0 0 20px var(--discord-color);
+            text-shadow: none;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- La imagen debe estar en la misma carpeta que este archivo HTML -->
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Normativas Generales</h1>
+            <p class="intro">📜 DISCORD | STREAM CITY RP</p>
+        </div>
+
+        <div class="desc-text">
+            El cumplimiento de este reglamento es obligatorio para todos los integrantes de la comunidad. Estas normas están diseñadas para garantizar una convivencia saludable y un entorno de rol ordenado.
+        </div>
+
+        <h2>💬 1. Conducta y Respeto</h2>
+        <ul>
+            <li><strong>Convivencia Armónica:</strong> Se exige respeto absoluto hacia todos los miembros de la comunidad. Queda terminantemente prohibido cualquier tipo de insulto, discriminación, acoso o conducta tóxica.</li>
+            <li><strong>Lenguaje Apropiado:</strong> Mantenga un lenguaje civilizado en todo momento. Evite generar conflictos innecesarios o confrontaciones personales en canales públicos.</li>
+            <li><strong>Integridad de Identidad:</strong> Está estrictamente prohibido suplantar la identidad de otros usuarios o hacerse pasar por miembros del equipo administrativo.</li>
+        </ul>
+
+        <h2>📁 2. Uso de Canales y Contenido</h2>
+        <ul>
+            <li><strong>Orden Temático:</strong> Todo mensaje debe ser publicado en su canal correspondiente. Evite el uso de canales para temas ajenos a su propósito original.</li>
+            <li><strong>Prohibición de Contenido Inapropiado:</strong> Queda prohibida la difusión de material ilegal, contenido NSFW (contenido no apto para el trabajo) o cualquier archivo que atente contra las políticas de la plataforma o la comunidad.</li>
+            <li><strong>Prohibición de Spam:</strong> No se permite realizar spam, flood (envío masivo de mensajes) ni publicidad no autorizada de otros servidores o proyectos externos.</li>
+        </ul>
+
+        <h2>🛡️ 3. Operatividad y Seguridad</h2>
+        <ul>
+            <li><strong>Integridad del Servidor:</strong> Está terminantemente prohibido el abuso de bugs, errores, vulnerabilidades o cualquier acción que comprometa la estabilidad del servidor (tanto de Discord como in-game).</li>
+            <li><strong>Gestión de Apelaciones:</strong> Las decisiones tomadas por el equipo de Staff son inapelables en canales públicos. Cualquier discrepancia o solicitud de revisión debe canalizarse exclusivamente a través del sistema de Tickets.</li>
+            <li><strong>Responsabilidad Comunitaria:</strong> Cualquier acción u omisión que perjudique la salud de la comunidad o el correcto funcionamiento del servidor será sujeta a medidas correctivas.</li>
+        </ul>
+
+        <h2>⚠️ Sanciones</h2>
+        <p style="font-size: 1.15em; margin-bottom: 20px;">El equipo de Staff tiene la facultad de aplicar medidas disciplinarias proporcionales a la gravedad de la falta. Las sanciones incluyen, pero no se limitan a:</p>
+        <ul class="sanciones-list">
+            <li><strong>Advertencias (Warns):</strong> Avisos formales por faltas leves.</li>
+            <li><strong>Muteos Temporales:</strong> Restricción de comunicación en canales de texto o voz.</li>
+            <li><strong>Expulsiones:</strong> Retiro temporal del servidor.</li>
+            <li><strong>Baneos (Temporales o Permanentes):</strong> Exclusión definitiva por infracciones graves, reincidencia o acciones que atenten contra la seguridad del servidor.</li>
+        </ul>
+
+        <div class="alert-text">
+            La entrada al servidor implica la aceptación de estas normas. La ignorancia de las mismas no exime de su cumplimiento.
+        </div>
+
+        <div class="btn-container">
+            <a href="inicio.html" class="btn-volver">◀ Volver al Menú Principal</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
