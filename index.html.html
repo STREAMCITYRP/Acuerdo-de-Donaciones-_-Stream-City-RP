@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acuerdo de Donaciones | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid var(--neon-purple);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(176, 38, 255, 0.4), inset 0 0 20px rgba(176, 38, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalle Cyberpunk superior */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--neon-purple), 0 0 50px rgba(255, 42, 157, 0.5);
+            margin-bottom: 25px;
+            border: 2px solid var(--neon-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-pink);
+            font-size: 2.5em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            border-left: 4px solid var(--neon-pink);
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.15em;
+        }
+
+        ul li::before {
+            content: '►';
+            color: var(--neon-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9em;
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+
+        strong {
+            color: #ffffff;
+            text-shadow: 0 0 4px var(--neon-purple);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(176, 38, 255, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- La imagen debe estar en la misma carpeta que este archivo HTML -->
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Acuerdo de Donaciones</h1>
+            <p class="intro">STREAM CITY RP</p>
+        </div>
+
+        <p style="text-align: justify; font-size: 1.2em;">
+            Al realizar cualquier tipo de contribución a <strong>Stream City RP</strong>, confirmas que has leído, comprendido y aceptado en su totalidad las siguientes directrices. Nuestras donaciones son gestos estrictamente voluntarios. Todos los fondos recaudados se destinan íntegramente a cubrir los costos de alojamiento (host), mantenimiento técnico, pago de licencias y el desarrollo constante de la ciudad.
+        </p>
+
+        <h2>💎 Contribuciones y Beneficios</h2>
+        <ul>
+            <li><strong>Recompensas In-Game:</strong> Como muestra de nuestra gratitud, ofrecemos beneficios dentro del juego proporcionales al apoyo brindado a la comunidad.</li>
+            <li><strong>Proceso Obligatorio:</strong> Toda intención de contribución debe gestionarse exclusivamente abriendo un ticket en el canal correspondiente. No se procesarán, validarán ni entregarán beneficios por donaciones no anunciadas previamente.</li>
+            <li><strong>Cero Inmunidad:</strong> El estatus de colaborador o "Donador" no otorga privilegios sobre la normativa de Roleplay. Todos los usuarios están sujetos a las mismas reglas y pueden ser sancionados por el Staff si cometen faltas.</li>
+            <li><strong>Intransferibilidad:</strong> Los beneficios obtenidos (vehículos VIP, propiedades, armas, negocios, etc.) son estrictamente personales y están ligados a tu cuenta. No se permite su traspaso a otros jugadores ni el intercambio por un beneficio diferente al adquirido originalmente.</li>
+        </ul>
+
+        <h2>🚫 Política de Reembolsos</h2>
+        <ul>
+            <li>Dado que las contribuciones son voluntarias y se invierten directamente en mantener Stream City RP en línea, <strong>no se realizarán reembolsos bajo ninguna circunstancia</strong>. Toda donación se considera un aporte final y definitivo.</li>
+        </ul>
+
+        <h2>🔐 Seguridad de tu Cuenta</h2>
+        <ul>
+            <li><strong>Servicios Externos:</strong> No nos hacemos responsables por la pérdida de beneficios derivada de baneos globales o suspensiones emitidas por plataformas de terceros (FiveM, Cfx.re, Rockstar Games, Steam, etc.).</li>
+            <li><strong>Responsabilidad Personal:</strong> Eres el único responsable de salvaguardar tus credenciales. La administración no repondrá beneficios perdidos a causa de robos de cuenta, hackeos o por prestar tu usuario a terceros.</li>
+        </ul>
+
+        <h2>💻 Activos Digitales del Servidor</h2>
+        <ul>
+            <li><strong>Propiedad Intelectual:</strong> Todo el contenido digital del servidor (scripts, mapeados, vehículos importados, ropa custom, etc.) pertenece a la infraestructura de Stream City RP. Al donar, recibes una licencia temporal de uso y disfrute dentro de la ciudad, no los derechos de propiedad sobre los archivos.</li>
+            <li><strong>Ajustes y Balanceo:</strong> Nos reservamos el derecho de modificar, balancear (velocidades, manejo, capacidades) o retirar cualquier activo si compromete la economía o estabilidad del servidor, sin obligación de notificación previa.</li>
+            <li><strong>Actualizaciones Mayores (Wipes):</strong> En caso de actualizaciones masivas o reinicios de base de datos, se dará un tiempo estipulado mediante anuncios para que registres tus activos. Si no lo haces dentro del plazo, se considerarán abandonados sin derecho a reclamo.</li>
+            <li><strong>Prohibición de RMT:</strong> Queda terminantemente prohibido el Real Money Trading (vender o intercambiar vehículos, dinero in-game, propiedades o cualquier activo del servidor por dinero real).</li>
+        </ul>
+
+        <h2>⚖️ Sanciones y Pérdida de Beneficios</h2>
+        <ul>
+            <li><strong>Baneos Permanentes:</strong> La expulsión definitiva (Baneo Permanente) de la comunidad resultará en la revocación inmediata e irrecuperable de todos tus beneficios obtenidos como colaborador.</li>
+            <li><strong>Tolerancia Cero:</strong> El uso de trampas (hacks/mod menus), abuso de bugs (exploits), extracción de archivos del servidor, estafas a otros usuarios, toxicidad extrema o amenazas, resultará en la pérdida total de tu inversión y el veto de la comunidad.</li>
+        </ul>
+
+        <h2>🔄 Modificaciones a este Acuerdo</h2>
+        <ul>
+            <li>La administración de Stream City RP se reserva el derecho de actualizar estos términos en cualquier momento para proteger la integridad del proyecto. Es responsabilidad del usuario mantenerse informado a través de nuestros canales oficiales. Permanecer en el servidor y en nuestro Discord implica la aceptación de la normativa vigente.</li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
