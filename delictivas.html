@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normativas Delictivas | Stream City RP</title>
+    <title>Normativa Oficial Delictiva | Stream City RP</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -33,14 +33,13 @@
             margin: 0 auto;
             background: var(--panel-bg);
             padding: 50px;
-            border: 2px solid #ff3333; /* Cambiado a un tono rojizo para "Delictivo" */
+            border: 2px solid #ff3333;
             border-radius: 15px;
             box-shadow: 0 0 25px rgba(255, 51, 51, 0.4), inset 0 0 20px rgba(255, 51, 51, 0.1);
             position: relative;
             overflow: hidden;
         }
 
-        /* Detalle Cyberpunk superior - Adaptado a tonos más agresivos */
         .container::before {
             content: '';
             position: absolute;
@@ -100,7 +99,7 @@
             margin-top: 40px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 1.5em;
+            font-size: 1.4em;
         }
 
         ul {
@@ -124,6 +123,25 @@
             top: 2px;
             font-size: 0.9em;
             text-shadow: 0 0 5px var(--neon-pink);
+        }
+
+        .sanciones-list {
+            padding-left: 0;
+            margin-top: 10px;
+            list-style: none;
+        }
+
+        .sanciones-list li {
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .sanciones-list li::before {
+            content: '▪';
+            color: #ff3333;
+            font-size: 1.2em;
+            top: 0;
         }
 
         strong {
@@ -190,52 +208,61 @@
         <div class="header">
             <!-- Recuerda que la imagen debe estar en la misma carpeta que este archivo HTML -->
             <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
-            <h1>Normativas Delictivas</h1>
+            <h1>Normativa Oficial Delictiva</h1>
             <p class="intro">⚖️ STREAM CITY RP</p>
         </div>
 
-        <h2>🔫 Protocolo de Armamento y Combate</h2>
+        <h2>🏛️ 1. Bases de Convivencia y Reglas Generales</h2>
         <ul>
-            <li><strong>Armamento Pesado:</strong> Las armas automáticas son de uso restringido. Su empleo está permitido únicamente en eventos de alto riesgo: Asalto a la Joyería, Banco Fleeca y Banco Central.</li>
-            <li><strong>Limpieza en Combate:</strong> Se prohíbe tajantemente cualquier ventaja técnica, incluyendo el uso de glitches, bugs o manipulación de animaciones durante enfrentamientos.</li>
-            <li><strong>Gestión de NPCs:</strong> Los ciudadanos deben mantener la paz con los NPCs. Está estrictamente prohibido eliminarlos o sustraer sus vehículos. La única excepción es la legítima defensa cuando el NPC abre fuego primero durante un intento de atraco.</li>
-            <li><strong>Protocolo de Cateo y Armas Policiales:</strong> En caso de interceptar a un oficial, solo está permitido retirar su arma de fuego. El único uso permitido para las armas sustraídas a la policía es su reciclaje por metal. Queda estrictamente prohibido su uso, porte o venta; cualquier incumplimiento de esto resultará en sanciones graves.</li>
-            <li><strong>Equipamiento Legal:</strong> Queda prohibido despojar a los oficiales de equipamiento legal (tablets, radios, etc.). El uso de estos objetos robados está terminantemente prohibido y será sancionado.</li>
-            <li><strong>Política de Carkill:</strong> Está prohibido utilizar vehículos como armas letales. No se puede abatir a oponentes desde el interior del vehículo, salvo que el objetivo haya descendido y, tras 30 segundos de advertencia verbal, se niegue a colaborar.</li>
+            <li><strong>Justificación de Rol:</strong> Todo acto delictivo debe tener una justificación de rol válida y coherente.</li>
+            <li><strong>Valoración de Vida (VL):</strong> Se debe valorar la vida del personaje en todo momento y bajo cualquier circunstancia.</li>
+            <li><strong>Integridad del Rol:</strong> Está prohibido realizar acciones cuyo único fin sea arruinar la experiencia de otros jugadores. No se permite el metagaming, powergaming ni cualquier otro tipo de rol indebido.</li>
+            <li><strong>Juego Limpio:</strong> Prohibido el uso de bugs o exploits. Queda estrictamente prohibido desconectarse del servidor, cerrar el juego o forzar un reinicio mientras el personaje está bajo una situación de rol activa, esposado, abatido o en proceso de ser cacheado (Combat Logging).</li>
         </ul>
 
-        <h2>📜 La Esencia del Rol (Directrices)</h2>
+        <h2>🔫 2. Protocolo de Armamento y Combate</h2>
         <ul>
-            <li><strong>La Voz antes que la Acción:</strong> Todo conflicto debe ser precedido por una interacción verbal clara. Se considera falta grave iniciar cualquier acto ilegal desde un vehículo sin haber bajado previamente para establecer el rol con la otra parte.</li>
-            <li><strong>Valoración de la Vida:</strong> El DeathMatch (DM) injustificado está prohibido. Si el objetivo muestra cooperación total y respeta el valor de su vida, ejecutarlo es una violación directa del reglamento sancionable severamente.</li>
-            <li><strong>Efecto PK/CK:</strong> Tras ser reanimado, el jugador entra en estado de amnesia total respecto a lo ocurrido y a los involucrados. Además, la zona del altercado queda restringida para el jugador por un periodo de 30 minutos.</li>
-            <li><strong>Identidad y Máscaras:</strong> Todo acto delictivo debe ejecutarse con el rostro oculto. De no hacerlo, las autoridades tienen vía libre para iniciar una investigación IC formal.</li>
-            <li><strong>Juego Limpio:</strong> Se prohíbe la búsqueda de vacíos legales para evadir normas. El Staff se reserva el derecho de interpretar y penalizar cualquier intento de explotación normativa.</li>
-            <li><strong>Evidencia (POV):</strong> Es obligatorio contar con una grabación (POV) de los enfrentamientos. La ausencia de esta ante una solicitud del Staff resultará en sanción.</li>
+            <li><strong>Armas Automáticas:</strong> Restringidas exclusivamente a eventos de alto riesgo: Joyería, Fleeca y Banco Central.</li>
+            <li><strong>Armas Policiales:</strong> El único uso permitido para las armas sustraídas a la policía es su reciclaje por metal. Queda estrictamente prohibido su porte, uso o venta; cualquier incumplimiento resultará en sanciones graves.</li>
+            <li><strong>Tiroteos:</strong> Todo tiroteo debe tener un motivo claro. Queda prohibido el Random DeathMatch (RDM) y el Revenge Kill (RK). Se debe respetar el Fear RP.</li>
+            <li><strong>Carkill y VDM:</strong> Prohibido realizar VDM. Queda prohibido atropellar intencionalmente o abatir oponentes desde el interior del vehículo, salvo que el objetivo haya descendido y, tras 30 segundos de advertencia verbal, se niegue a cooperar.</li>
+            <li><strong>Interacción con NPCs:</strong> Prohibido matar o robar NPCs. Excepción: legítima defensa si ellos disparan primero durante un intento de atraco.</li>
         </ul>
 
-        <h2>🚨 Actos Delictivos y Operaciones</h2>
+        <h2>🚨 3. Robos, Asaltos y Secuestros</h2>
         <ul>
-            <li><strong>Protocolo de Entorno:</strong> Para cualquier acto de robo, es obligatorio enviar el aviso de entorno correspondiente especificando los detalles del hecho.</li>
-            <li><strong>Excepción en Garajes:</strong> El robo de vehículos en garajes es la única excepción donde no es obligatorio enviar el aviso de entorno; sin embargo, los oficiales pueden llegar al lugar sin aviso previo.</li>
-            <li><strong>Robos a Civiles:</strong> Requieren un mínimo de 2 oficiales de policía en servicio. Los robos a civiles están permitidos únicamente durante la noche o fuera del núcleo urbano (zona norte) a cualquier hora.</li>
-            <li><strong>Secuestros:</strong> Requieren una presencia mínima de 2 policías. Es imperativo enviar el comando de entorno detallando vestimenta, armamento y vehículos involucrados.</li>
-            <li><strong>Dinámica de Persecución:</strong> Tras la orden de alto, el sospechoso dispone de 2 minutos para buscar una salida. Abrir fuego sin justificación ni advertencia previa es motivo de sanción.</li>
-            <li><strong>Restricciones de Zona:</strong> Está prohibido realizar roles en áreas que dependan de teleports o abusos de animaciones; el entorno debe ser físicamente coherente.</li>
-            <li><strong>Cop-Baiting:</strong> Las provocaciones gratuitas a las fuerzas del orden para generar persecuciones están prohibidas.</li>
-            <li><strong>Rescates:</strong> Prohibido intervenir en traslados policiales si el sujeto ya está esposado y en custodia.</li>
+            <li><strong>Interacción Previa:</strong> Todo conflicto debe iniciar con una interacción verbal. Prohibido atracar o disparar desde un vehículo sin haber bajado primero.</li>
+            <li><strong>Gestión de Entorno:</strong> Es obligatorio enviar el aviso de entorno en todos los robos y secuestros especificando detalles (vestimenta, vehículo). Excepción: robo en garajes, donde el aviso no es obligatorio, pero la policía puede intervenir sin aviso.</li>
+            <li><strong>Robos a Civiles:</strong> Requieren un mínimo de 2 policías en servicio. Permitidos solo de noche o en zona norte (cualquier hora). No se puede robar a jugadores recién conectados o AFK. Está prohibido asaltar zonas seguras (hospitales, garajes, tiendas).</li>
+            <li><strong>Robos Grandes:</strong> Requieren el mínimo de policías y rehenes en rol serio; no se pueden ejecutar sin causa ni iniciar un evento si otro está activo. No ejecutar rehenes sin razón válida.</li>
+            <li><strong>Secuestros:</strong> Requieren motivo, negociación obligatoria y presencia mínima de 2 policías. Prohibido secuestrar a administrativos en servicio o repetir el secuestro al mismo jugador constantemente.</li>
         </ul>
 
-        <h2>💼 Recursos y Soporte</h2>
+        <h2>🏢 4. Organizaciones Criminales</h2>
         <ul>
-            <li><strong>Uso de Flota Estatal:</strong> El robo o uso de vehículos, uniformes y equipamiento de Policía o EMS para fines ilegales está prohibido. Los vehículos de servicios públicos (grúas/taxis) no pueden integrarse en actividades delictivas.</li>
-            <li><strong>Persecución Activa:</strong> Queda prohibido guardar cualquier vehículo si la policía mantiene una persecución activa.</li>
-            <li><strong>Canal de Ayuda:</strong> Todas las gestiones, dudas o reportes se canalizan exclusivamente vía Ticket. El contacto directo por mensaje privado (DM) a miembros del Staff está prohibido.</li>
-            <li><strong>Aclaración de Mapa:</strong> En las zonas designadas como rojas, el entorno corresponde estrictamente a Paleto, no a Cayo.</li>
+            <li><strong>Estatus:</strong> Rol oficial aprobado en Discord. Sin aprobación, la organización puede ser sancionada.</li>
+            <li><strong>Responsabilidad:</strong> Los líderes responden por las acciones de sus miembros. Se exige actividad mínima y nombres no ofensivos.</li>
+            <li><strong>Guerra de Bandas:</strong> Todo conflicto armado entre organizaciones requiere un rol previo o conflicto histórico justificado.</li>
+        </ul>
+
+        <h2>🛡️ 5. Operaciones Técnicas y Soporte</h2>
+        <ul>
+            <li><strong>Fuga y Persecución:</strong> Prohibido realizar maniobras que ignoren las leyes de la física (saltar puentes innecesarios, etc.). Queda prohibido guardar el vehículo si la policía mantiene una persecución activa.</li>
+            <li><strong>Apoyo a la Fuga:</strong> Queda prohibido que civiles ajenos a la organización criminal interfieran en persecuciones policiales.</li>
+            <li><strong>Zona Roja:</strong> Toda zona marcada como roja es territorio de Paleto.</li>
+            <li><strong>Sanciones:</strong> El incumplimiento de normativas será penalizado según la gravedad:
+                <ul class="sanciones-list">
+                    <li><strong>Leves:</strong> Advertencia verbal/escrita.</li>
+                    <li><strong>Graves:</strong> Jail administrativo o suspensión temporal.</li>
+                    <li><strong>Muy graves:</strong> Ban temporal o permanente.</li>
+                    <li><strong>Organizaciones:</strong> Advertencias, suspensión y retiro del rol por reincidencia.</li>
+                </ul>
+            </li>
+            <li><strong>Gestión:</strong> Dudas y reportes deben abrirse exclusivamente vía Ticket. Prohibido el contacto directo (DM) a administradores.</li>
         </ul>
 
         <div class="alert-text">
-            Recuerda que este reglamento es la base para mantener el orden y la calidad del rol en Stream City RP. ¡Cualquier duda, el Staff está a tu disposición mediante Ticket!
+            Nota Final: El objetivo del rol delictivo es generar experiencias realistas y entretenidas para todos los jugadores. El incumplimiento podrá resultar en sanciones administrativas.
         </div>
 
         <div class="btn-container">
