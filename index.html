@@ -139,6 +139,36 @@
             padding-top: 25px;
             font-family: 'Orbitron', sans-serif;
         }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .btn-volver:hover {
+            background: var(--neon-cyan);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-cyan), inset 0 0 20px var(--neon-cyan);
+            text-shadow: none;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -192,6 +222,11 @@
         <ul>
             <li>La administración de Stream City RP se reserva el derecho de actualizar estos términos en cualquier momento para proteger la integridad del proyecto. Es responsabilidad del usuario mantenerse informado a través de nuestros canales oficiales. Permanecer en el servidor y en nuestro Discord implica la aceptación de la normativa vigente.</li>
         </ul>
+
+        <div class="btn-container">
+            <!-- Por ahora este botón lleva a "inicio.html" (página que crearemos luego) -->
+            <a href="inicio.html" class="btn-volver">◀ Volver al Menú Principal</a>
+        </div>
 
         <div class="footer">
             <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
