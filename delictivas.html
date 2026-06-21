@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normativas Delictivas | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid #ff3333; /* Cambiado a un tono rojizo para "Delictivo" */
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 51, 51, 0.4), inset 0 0 20px rgba(255, 51, 51, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalle Cyberpunk superior - Adaptado a tonos más agresivos */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff3333, var(--neon-pink), var(--neon-purple));
+            box-shadow: 0 0 15px #ff3333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 51, 51, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px #ff3333, 0 0 50px rgba(255, 42, 157, 0.5);
+            margin-bottom: 25px;
+            border: 2px solid #ff3333;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff3333, 0 0 20px var(--neon-pink);
+            font-size: 2.5em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: #ff3333;
+            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff3333;
+            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+            border-left: 4px solid var(--neon-pink);
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.15em;
+            text-align: justify;
+        }
+
+        ul li::before {
+            content: '►';
+            color: var(--neon-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9em;
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+
+        strong {
+            color: #ffffff;
+            text-shadow: 0 0 4px #ff3333;
+        }
+
+        .alert-text {
+            text-align: center;
+            font-size: 1.2em;
+            color: var(--neon-pink);
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 42, 157, 0.1);
+            border: 1px solid var(--neon-pink);
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(255, 51, 51, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(255, 51, 51, 0.1);
+            color: #ff3333;
+            border: 2px solid #ff3333;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.3), inset 0 0 10px rgba(255, 51, 51, 0.2);
+        }
+
+        .btn-volver:hover {
+            background: #ff3333;
+            color: #ffffff;
+            box-shadow: 0 0 30px #ff3333, inset 0 0 20px #ff3333;
+            text-shadow: none;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <!-- Recuerda que la imagen debe estar en la misma carpeta que este archivo HTML -->
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Normativas Delictivas</h1>
+            <p class="intro">⚖️ STREAM CITY RP</p>
+        </div>
+
+        <h2>🔫 Protocolo de Armamento y Combate</h2>
+        <ul>
+            <li><strong>Armamento Pesado:</strong> Las armas automáticas son de uso restringido. Su empleo está permitido únicamente en eventos de alto riesgo: Asalto a la Joyería, Banco Fleeca y Banco Central.</li>
+            <li><strong>Limpieza en Combate:</strong> Se prohíbe tajantemente cualquier ventaja técnica, incluyendo el uso de glitches, bugs o manipulación de animaciones durante enfrentamientos.</li>
+            <li><strong>Gestión de NPCs:</strong> Los ciudadanos deben mantener la paz con los NPCs. Está estrictamente prohibido eliminarlos o sustraer sus vehículos. La única excepción es la legítima defensa cuando el NPC abre fuego primero durante un intento de atraco.</li>
+            <li><strong>Protocolo de Cateo y Armas Policiales:</strong> En caso de interceptar a un oficial, solo está permitido retirar su arma de fuego. El único uso permitido para las armas sustraídas a la policía es su reciclaje por metal. Queda estrictamente prohibido su uso, porte o venta; cualquier incumplimiento de esto resultará en sanciones graves.</li>
+            <li><strong>Equipamiento Legal:</strong> Queda prohibido despojar a los oficiales de equipamiento legal (tablets, radios, etc.). El uso de estos objetos robados está terminantemente prohibido y será sancionado.</li>
+            <li><strong>Política de Carkill:</strong> Está prohibido utilizar vehículos como armas letales. No se puede abatir a oponentes desde el interior del vehículo, salvo que el objetivo haya descendido y, tras 30 segundos de advertencia verbal, se niegue a colaborar.</li>
+        </ul>
+
+        <h2>📜 La Esencia del Rol (Directrices)</h2>
+        <ul>
+            <li><strong>La Voz antes que la Acción:</strong> Todo conflicto debe ser precedido por una interacción verbal clara. Se considera falta grave iniciar cualquier acto ilegal desde un vehículo sin haber bajado previamente para establecer el rol con la otra parte.</li>
+            <li><strong>Valoración de la Vida:</strong> El DeathMatch (DM) injustificado está prohibido. Si el objetivo muestra cooperación total y respeta el valor de su vida, ejecutarlo es una violación directa del reglamento sancionable severamente.</li>
+            <li><strong>Efecto PK/CK:</strong> Tras ser reanimado, el jugador entra en estado de amnesia total respecto a lo ocurrido y a los involucrados. Además, la zona del altercado queda restringida para el jugador por un periodo de 30 minutos.</li>
+            <li><strong>Identidad y Máscaras:</strong> Todo acto delictivo debe ejecutarse con el rostro oculto. De no hacerlo, las autoridades tienen vía libre para iniciar una investigación IC formal.</li>
+            <li><strong>Juego Limpio:</strong> Se prohíbe la búsqueda de vacíos legales para evadir normas. El Staff se reserva el derecho de interpretar y penalizar cualquier intento de explotación normativa.</li>
+            <li><strong>Evidencia (POV):</strong> Es obligatorio contar con una grabación (POV) de los enfrentamientos. La ausencia de esta ante una solicitud del Staff resultará en sanción.</li>
+        </ul>
+
+        <h2>🚨 Actos Delictivos y Operaciones</h2>
+        <ul>
+            <li><strong>Protocolo de Entorno:</strong> Para cualquier acto de robo, es obligatorio enviar el aviso de entorno correspondiente especificando los detalles del hecho.</li>
+            <li><strong>Excepción en Garajes:</strong> El robo de vehículos en garajes es la única excepción donde no es obligatorio enviar el aviso de entorno; sin embargo, los oficiales pueden llegar al lugar sin aviso previo.</li>
+            <li><strong>Robos a Civiles:</strong> Requieren un mínimo de 2 oficiales de policía en servicio. Los robos a civiles están permitidos únicamente durante la noche o fuera del núcleo urbano (zona norte) a cualquier hora.</li>
+            <li><strong>Secuestros:</strong> Requieren una presencia mínima de 2 policías. Es imperativo enviar el comando de entorno detallando vestimenta, armamento y vehículos involucrados.</li>
+            <li><strong>Dinámica de Persecución:</strong> Tras la orden de alto, el sospechoso dispone de 2 minutos para buscar una salida. Abrir fuego sin justificación ni advertencia previa es motivo de sanción.</li>
+            <li><strong>Restricciones de Zona:</strong> Está prohibido realizar roles en áreas que dependan de teleports o abusos de animaciones; el entorno debe ser físicamente coherente.</li>
+            <li><strong>Cop-Baiting:</strong> Las provocaciones gratuitas a las fuerzas del orden para generar persecuciones están prohibidas.</li>
+            <li><strong>Rescates:</strong> Prohibido intervenir en traslados policiales si el sujeto ya está esposado y en custodia.</li>
+        </ul>
+
+        <h2>💼 Recursos y Soporte</h2>
+        <ul>
+            <li><strong>Uso de Flota Estatal:</strong> El robo o uso de vehículos, uniformes y equipamiento de Policía o EMS para fines ilegales está prohibido. Los vehículos de servicios públicos (grúas/taxis) no pueden integrarse en actividades delictivas.</li>
+            <li><strong>Persecución Activa:</strong> Queda prohibido guardar cualquier vehículo si la policía mantiene una persecución activa.</li>
+            <li><strong>Canal de Ayuda:</strong> Todas las gestiones, dudas o reportes se canalizan exclusivamente vía Ticket. El contacto directo por mensaje privado (DM) a miembros del Staff está prohibido.</li>
+            <li><strong>Aclaración de Mapa:</strong> En las zonas designadas como rojas, el entorno corresponde estrictamente a Paleto, no a Cayo.</li>
+        </ul>
+
+        <div class="alert-text">
+            Recuerda que este reglamento es la base para mantener el orden y la calidad del rol en Stream City RP. ¡Cualquier duda, el Staff está a tu disposición mediante Ticket!
+        </div>
+
+        <div class="btn-container">
+            <a href="inicio.html" class="btn-volver">◀ Volver al Menú Principal</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
