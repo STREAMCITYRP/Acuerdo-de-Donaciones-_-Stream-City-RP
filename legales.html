@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normativas Legales | Stream City RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #b026ff;
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --dark-bg: #050508;
+            --panel-bg: rgba(15, 10, 25, 0.85);
+            --text-main: #e0e6ed;
+            --theme-color: var(--neon-cyan); /* Color principal de esta página */
+        }
+        
+        /* Desplazamiento suave para el botón de anclaje */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--panel-bg);
+            padding: 50px;
+            border: 2px solid var(--theme-color);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4), inset 0 0 20px rgba(0, 240, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), var(--theme-color));
+            box-shadow: 0 0 15px var(--theme-color);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px var(--theme-color), 0 0 50px rgba(255, 42, 157, 0.3);
+            margin-bottom: 25px;
+            border: 2px solid var(--theme-color);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--theme-color), 0 0 20px var(--neon-pink);
+            font-size: 2.5em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h1.section-title {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px dashed rgba(0, 240, 255, 0.4);
+        }
+
+        p.intro {
+            font-size: 1.3em;
+            color: var(--theme-color);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--theme-color);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+            border-left: 4px solid var(--neon-pink);
+            padding-left: 15px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.4em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.15em;
+            text-align: justify;
+        }
+
+        ul li::before {
+            content: '►';
+            color: var(--neon-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9em;
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+
+        strong {
+            color: #ffffff;
+            text-shadow: 0 0 4px var(--theme-color);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(224, 230, 237, 0.6);
+            border-top: 1px solid rgba(0, 240, 255, 0.3);
+            padding-top: 25px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--theme-color);
+            border: 2px solid var(--theme-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        .btn-volver:hover {
+            background: var(--theme-color);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--theme-color), inset 0 0 20px var(--theme-color);
+            text-shadow: none;
+            transform: scale(1.05);
+        }
+
+        /* --- BOTÓN FLOTANTE LATERAL --- */
+        .side-nav {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+
+        .btn-ems-scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 42, 157, 0.1);
+            color: var(--neon-pink);
+            border: 2px solid var(--neon-pink);
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 42, 157, 0.3);
+            text-align: center;
+        }
+
+        .btn-ems-scroll span {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .btn-ems-scroll:hover {
+            background: var(--neon-pink);
+            color: #ffffff;
+            box-shadow: 0 0 25px var(--neon-pink);
+            transform: scale(1.1);
+        }
+
+        /* Ocultar o reubicar el botón flotante en pantallas pequeñas (móviles) */
+        @media (max-width: 1200px) {
+            .side-nav {
+                position: static;
+                transform: none;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .btn-ems-scroll {
+                flex-direction: row;
+                gap: 10px;
+                padding: 10px 25px;
+            }
+            .btn-ems-scroll span {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón Flotante Lateral -->
+    <div class="side-nav">
+        <a href="#ems-section" class="btn-ems-scroll">
+            <span>🚑</span>
+            Ir a EMS
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <img src="WhatsApp Image 2026-06-18 at 10.27.08 PM.jpeg" alt="Stream City RP Logo" class="logo">
+            <h1>Normativas Legales</h1>
+            <p class="intro">⚖️ STREAM CITY RP</p>
+        </div>
+
+        <!-- SECCIÓN POLICÍA -->
+        <h1>🚓 NORMATIVAS POLICÍA</h1>
+        
+        <h2>Conducta y Profesionalismo</h2>
+        <ul>
+            <li><strong>Gestión de Unidades:</strong> La asignación de unidades y el despliegue operativo estarán bajo la responsabilidad exclusiva del oficial de mayor rango (H50) en turno.</li>
+            <li><strong>Inicio de Servicio:</strong> Todo agente deberá reportarse en la frecuencia policial como "Esperando Asignación" al comenzar su guardia.</li>
+            <li><strong>Uniformidad:</strong> El uso del uniforme reglamentario es obligatorio e innegociable durante toda la jornada de servicio.</li>
+            <li><strong>Jerarquía y Disciplina:</strong> Se exige un trato profesional entre compañeros y una subordinación absoluta hacia los rangos superiores.</li>
+            <li><strong>Presencia Activa:</strong> Está estrictamente prohibido permanecer en estado AFK mientras se encuentra de servicio.</li>
+            <li><strong>Transparencia (POV):</strong> Es obligatorio mantener la grabación del turno de servicio activa como medida de auditoría ante incidentes.</li>
+        </ul>
+
+        <h2>Operaciones y Procedimientos</h2>
+        <ul>
+            <li><strong>Formación de Cadetes:</strong> Queda prohibido el patrullaje en solitario o la respuesta a alertas por parte de cadetes sin la supervisión directa de un oficial superior.</li>
+            <li><strong>Uso de Fuerza:</strong> El uso de armas de fuego constituye una medida de alta agresión, restringida exclusivamente a situaciones de peligro inminente para la vida de agentes o civiles, debiendo estar plenamente justificado.</li>
+            <li><strong>Protocolo de Registro:</strong> Los registros se realizarán en comisaría o tras la comisión de un delito. Solo se permite confiscar objetos ilícitos (armas, drogas, dinero ilícito). Está estrictamente prohibido despojar a los ciudadanos de objetos legales (radios, teléfonos, suministros alimenticios o accesorios de valor).</li>
+            <li><strong>Grabación Corporal:</strong> El registro audiovisual se limitará exclusivamente al uso de cámaras corporales (GoPro); las patrullas no contarán con cámaras integradas.</li>
+            <li><strong>Fuera de Servicio:</strong> Ante un acto delictivo, el agente deberá notificar a la central sin intervenir directamente. Está prohibido el ejercicio de actos delictivos o el uso de armamento policial mientras se rolea como civil.</li>
+            <li><strong>Protocolo de Detención:</strong> El procesamiento debe realizarse sin resistencia. En caso de negativa a cooperar o detección de ilícitos, el sospechoso será trasladado a celda para la lectura de derechos y formulación de cargos.</li>
+            <li><strong>Apoyo Operativo:</strong> Ante situaciones de superación numérica, el oficial está obligado a solicitar refuerzos antes de escalar a fuerza letal.</li>
+            <li><strong>Prioridad de Unidad:</strong> La seguridad e integridad física de los integrantes del cuerpo es la prioridad absoluta en toda operación.</li>
+        </ul>
+
+        <h2>Prohibiciones Específicas</h2>
+        <ul>
+            <li>Prohibido usurpar rangos o atribuciones superiores.</li>
+            <li>Prohibido el uso de técnicas de sigilo no reglamentarias como quitarse el calzado.</li>
+            <li>Prohibido el patrullaje preventivo en zonas de recolección de drogas para la persecución de civiles.</li>
+            <li>El intento de robo de una patrulla es motivo inmediato para la aplicación de fuerza letal.</li>
+            <li>Queda estrictamente prohibido el rol de policía encubierto fuera de servicio.</li>
+        </ul>
+
+        <h2>Protocolo de Aeronave (Águila)</h2>
+        <ul>
+            <li><strong>Restricción de Uso:</strong> El uso de la unidad aérea está limitado a emergencias críticas o eventos de alto nivel (bancos, eventos especiales). Queda prohibido el patrullaje de rutina.</li>
+            <li><strong>Negociación:</strong> En roles de alto riesgo, el piloto debe solicitar autorización a los implicados para aterrizar; de no obtenerse, la unidad deberá mantenerse en vuelo hasta la finalización de la negociación.</li>
+            <li><strong>Entorno:</strong> Queda prohibido obstruir la vía pública con la aeronave, salvo en situaciones de emergencia.</li>
+        </ul>
+
+        <!-- SECCIÓN EMS CON ANCLA (ID) -->
+        <h1 id="ems-section" class="section-title">🚑 NORMATIVAS EMS</h1>
+
+        <h2>Comportamiento y Ética</h2>
+        <ul>
+            <li><strong>Interpretación:</strong> Se exige una interpretación de personaje realista en todo momento. Queda prohibido forzar roles a otros jugadores.</li>
+            <li><strong>Integridad:</strong> La participación de cualquier miembro del EMS en actividades delictivas está estrictamente prohibida.</li>
+        </ul>
+
+        <h2>Vehículos y Emergencias</h2>
+        <ul>
+            <li><strong>Uso de Flota:</strong> Los vehículos asignados deberán utilizarse exclusivamente para asistencia, transporte de pacientes y labores inherentes al servicio.</li>
+            <li><strong>Prioridad:</strong> El uso de señales sonoras y visuales es obligatorio ante una emergencia activa para garantizar la urgencia del traslado.</li>
+            <li><strong>Conducción:</strong> Aun bajo autorización de exceder límites de velocidad, el conductor mantendrá el control total del vehículo para salvaguardar la seguridad vial.</li>
+        </ul>
+
+        <h2>Escenarios Críticos y CK Médico</h2>
+        <ul>
+            <li><strong>Criterios de CK:</strong> Aplicable en casos de lesiones fatales incompatibles con la vida, falta de atención médica oportuna o evasión de rol (jugador que no responde al chequeo de pulso tras diez minutos de iniciado el rol).</li>
+            <li><strong>Procedimientos:</strong> Se priorizará la extracción segura en vehículos colisionados y la estabilización inmediata (RCP, control de hemorragias, manejo de shock).</li>
+        </ul>
+
+        <h2>Protocolo en Escenas de Conflicto</h2>
+        <ul>
+            <li><strong>Seguridad:</strong> El personal del EMS no ingresará a zonas de tiroteo hasta que las fuerzas de seguridad declaren el área como "Zona Segura". La comunicación por radio es obligatoria.</li>
+            <li><strong>Zona de Tratamiento:</strong> Se establecerá un perímetro seguro próximo a la escena para tratar a los heridos, garantizando su aislamiento de la línea de fuego.</li>
+        </ul>
+
+        <h2>Comunicaciones</h2>
+        <ul>
+            <li>El uso de radio es obligatorio para todo el personal. Se seguirán los protocolos de frecuencia estándar y los códigos específicos establecidos para situaciones de alta urgencia.</li>
+        </ul>
+
+        <div class="btn-container">
+            <a href="inicio.html" class="btn-volver">◀ Volver al Menú Principal</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 STREAM CITY RP. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </div>
+
+</body>
+</html>
